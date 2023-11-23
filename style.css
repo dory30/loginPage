@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+    margin: 0;
+  }
+  
+  .emoji {
+    font-size: 3em; /* Taille de l'emoji */
+    margin-bottom: 50px; /* Espacement entre l'emoji et le formulaire */
+  }
+
+  .emoji-sentence {
+    font-size: 15px;
+    margin-top: -50px;
+    margin-left: -5px;
+  }
+
+  .container {
+    width: 400px;
+    max-width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .haut {
+    margin-left: 165px;
+  }
+
+  .bas {
+    margin-top: 30px;
+  }
+
+  .container-input {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .container-input label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .container-input input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .container-input input:focus {
+    border-color: #e9ad38;
+  }
+  
+  .container-input input.error {
+    border-color: red;
+  }
+  
+  .container-input input.done {
+    border-color: green;
+  }
+  
+  .container-button button {
+    background: #e9ad38;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .container-button button.correct {
+    background: #252f3f;
+  }
+  
