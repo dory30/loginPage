@@ -9,13 +9,18 @@ body {
   
   .emoji {
     font-size: 3em; /* Taille de l'emoji */
-    margin-bottom: 50px; /* Espacement entre l'emoji et le formulaire */
+    margin-bottom: 40px;/* Espacement entre l'emoji et le formulaire */
+  }
+
+  .emoji img{
+    width: 50px;
   }
 
   .emoji-sentence {
     font-size: 15px;
     margin-top: -50px;
     margin-left: -5px;
+    font-weight: bold;
   }
 
   .container {

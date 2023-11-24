@@ -70,23 +70,50 @@ function checkIsButtonDone() {
     if (isValidateEmail && isValidatePassword) {
       button.classList.add("correct");
       button.textContent = "Se connecter";
-      updateEmoji("😊"); // Emoji heureux
+      updateEmoji("https://fonts.gstatic.com/s/e/notoemoji/latest/1f973/512.gif"); // Emoji heureux
       updateEmojiSentence("Bravooooo");
     } else {
       button.classList.remove("correct");
       button.textContent = "Ne me touche pas hein";
-      updateEmoji("😐"); // Emoji neutre
+      updateEmoji("https://fonts.gstatic.com/s/e/notoemoji/latest/1f610/512.gif"); // Emoji neutre
       updateEmojiSentence("Pas encore bon!");
     }
   }
 
-  function updateEmoji(mood) {
-    emoji.textContent = mood;
-  }
+  function updateEmoji(imageSrc) {
+    // Trouve l'élément avec l'id "emoji"
+    const emojiContainer = document.getElementById("emoji");
+
+    // Remplace le contenu HTML de l'élément avec l'image
+    emojiContainer.innerHTML = `
+    <img src="${imageSrc}" alt="emoji" width="50" height="50">
+  `;
+}
 
   function updateEmojiSentence(sentence) {
     emojisentence.textContent = sentence;
   }
+
+  function checkIsButtonDone() {
+    if (isValidateEmail && isValidatePassword) {
+        button.classList.add("correct");
+        button.textContent = "Se connecter";
+        updateEmoji("https://fonts.gstatic.com/s/e/notoemoji/latest/1f973/512.gif"); // Emoji heureux
+        updateEmojiSentence("Bravooooo");
+        resetButtonPosition(); // Ajout de cette ligne
+    } else {
+        button.classList.remove("correct");
+        button.textContent = "Ne me touche pas hein";
+        updateEmoji("https://fonts.gstatic.com/s/e/notoemoji/latest/1f610/512.gif"); // Emoji neutre
+        updateEmojiSentence("Pas encore bon!");
+    }
+}
+
+function resetButtonPosition() {
+    // Réinitialise la transformation du bouton à sa position initiale
+    button.style.transform = "translate(0, 0)";
+}
+
 
 window.addEventListener("mousemove", (e) => {
     button.addEventListener("mouseenter", () => {
